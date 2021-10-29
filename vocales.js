@@ -1,14 +1,14 @@
 function contarVocales(texto) {
-    var texto1 = document.getElementById("textos").value;
-      var vocales = "aeiou";
-      var contador = 0;
+  let contadorVocales = 0;
+  let vocal = ["a", "e", "i", "o", "u"]
     
-      for (i = 0; i < tamtexto; ++i) {
-        if (vocales.indexOf(tamtexto[i]) !== 0) {
-          contador++;
-        } else {
-          alert("cuantas vocales hay");
-        }
-      }
-      alert(contador);
+  for(let i = 0; i < texto.length; ++i) {
+    if (vocal.indexOf(texto[i]) >= 0) {
+      ++contadorVocales;
     }
+  }
+
+  return contadorVocales;
+}
+
+console.log(contarVocales("programa"));
