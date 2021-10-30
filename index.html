@@ -1,45 +1,20 @@
 <script>
 
-var calculadora = prompt("que aperacion quieres hacer");
-switch(calculadora){
-    case("suma"):
-        suma();
-    break;
-    case ("resta"):
-        resta();
-    break;
-    case("division"):
-        division();
-    break;
-}
+//5 ejercicios de funciones (equipo)individual
+var n = nuevoNumero();
+var x = 10;
+console.log("aleatorio: "+n);
+console.log("contante"+x);
 
-function suma(){
-    let n1 = 10;
-    let n2 = 5;
-    let i = n1 + n2;
-    console.log(i)
+var total = x+ n;
+console.log(total);
+
+function nuevoNumero(){
+    var numero = Math.floor(Math.random()*10);
+    return numero;
 
 }
 
-function resta(){
-    let n1 = 10;
-    let n2 = 5;
-    let i = n1 - n2;
-    console.log(i)
-}
 
-function multiplicacion(){
-    let n1 = 10;
-    let n2 = 5;
-    let i = n1 * n2;
-    console.log(i)
-}
-
-function division(){
-    let n1 = 10;
-    let n2 = 5;
-    let i = n1 / n2;
-    console.log(i)
-}
 
 </script>
