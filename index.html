@@ -1,15 +1,35 @@
 <script>
-//deletrear
-var o =prompt("ingrese una palabra cualquiera")
-var letras = []
-arreglo(o);
-function arreglo (o){
-    for (var x = 0; x < o.length; x++){
-        letras.push(o[x])
-    }
+//1000 nombres aleatorios
+var nombre = ["elizabeth", "fernando", "pedro", "beto", "jesus","julio", "andrea", "paulina", "francisco", "karol", "karen", "nayely", "juan", "santiago", "adrian", "angel", "raquel"]
+var apellidos = ["gonzalez", "lopez", "martinez", "perez", "garcia", "sanchez", "hernandez", "sabino", "velasco", "alonzo", "rodriguez", "cano", "cortes", "mejia", "serrano", "fuentes", "castro"]
+
+for (var i = 0; i < 100; i++) { 
+    persona();
 }
 
-console.log(letras);
+function persona(){ 
+    let nombres = nombre[nombreAleatorio(0,nombre.length-1)];
+    let apellidoPaterno = apellidos[nombreAleatorio(0,apellidos.length-1)];
+    let apellidoMaterno = apellidos[nombreAleatorio(0,apellidos.length-1)];
+    let edad = nombreAleatorio(10,50);
+    let sexo;
+    if(nombreAleatorio(0,1)==0){
+        sexo = "hombre";
+    }else{
+        sexo = "mujer";
+    }
+    let persona = {
+        "nombre" : nombre,
+        "apellidoPaterno" : apellidoPaterno,
+        "apellidoMaterno" : apellidoMaterno,
+        "edad" : edad,
+        "sexo" : sexo,
+    }
+    console.log(persona);
+}
 
+function nombreAleatorio(min, max){ 
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 </script>
