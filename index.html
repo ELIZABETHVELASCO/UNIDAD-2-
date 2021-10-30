@@ -1,20 +1,15 @@
 <script>
-
-//5 ejercicios de funciones (equipo)individual
-var n = nuevoNumero();
-var x = 10;
-console.log("aleatorio: "+n);
-console.log("contante"+x);
-
-var total = x+ n;
-console.log(total);
-
-function nuevoNumero(){
-    var numero = Math.floor(Math.random()*10);
-    return numero;
-
+//deletrear
+var o =prompt("ingrese una palabra cualquiera")
+var letras = []
+arreglo(o);
+function arreglo (o){
+    for (var x = 0; x < o.length; x++){
+        letras.push(o[x])
+    }
 }
 
+console.log(letras);
 
 
 </script>
