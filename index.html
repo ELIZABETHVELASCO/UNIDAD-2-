@@ -1,17 +1,14 @@
 <script>
-var x = parseInt(prompt("Cuantas personas van a participar en la rifa?"))
-var nom = [];
 
-    for(i = 1; i <= x; i++){
-        var z = prompt("Nombre del participante")
-        nom.push(z);
+    let frase = prompt("ingrese oración");
+     contar(frase);
+    function contar(frase){
+        let vocales = frase.replace(/[bcdfghjklmnpqrstvwxyzBDFGHJKLMNPQRSTVWXYZ" "]/g, '').length;
+        let consonantes = frase.replace(/[aeiouAEIOU" "]/g, '').length;         
+        let alReves = frase.split("").reverse().join("");
+        alert("hay " +vocales+ " vocales");
+        alert("hay " +consonantes+ " consonantes");
+        alert("palabra al reves " + alReves);
     }
 
-//alea (nom);
-function alea (a){
-    b = Math.floor(Math.random()*(a.length));
-    c = a[b];
-    alert("El ganador es: " + c);
-    console.log(a);
-}
 </script>
