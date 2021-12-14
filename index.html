@@ -1,14 +1,31 @@
 <script>
+    //conversion de numero a letras
+var numero = prompt("ingrese el numero");
+const  generateRandomString = (numero) => {
 
-    let frase = prompt("ingrese oración");
-     contar(frase);
-    function contar(frase){
-        let vocales = frase.replace(/[bcdfghjklmnpqrstvwxyzBDFGHJKLMNPQRSTVWXYZ" "]/g, '').length;
-        let consonantes = frase.replace(/[aeiouAEIOU" "]/g, '').length;         
-        let alReves = frase.split("").reverse().join("");
-        alert("hay " +vocales+ " vocales");
-        alert("hay " +consonantes+ " consonantes");
-        alert("palabra al reves " + alReves);
+    const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let result1= '';
+    
+
+    const charactersLength = characters.length;
+
+    for ( let i = 0; i < numero; i++ ) {
+        for ( let i = 0; i < numero; i++ ) {
+            result1 += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        result1+='\n';
     }
+    return result1;
 
+}
+
+const displayRandomString = () =>{
+
+   let randomStringContainer = document.getElementById('random_string'); 
+
+    randomStringContainer.innerHTML =  generateRandomString(numero);    
+
+}
+
+console.log(generateRandomString(numero));
 </script>
